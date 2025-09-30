@@ -1,0 +1,261 @@
+.my-rides {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.my-rides-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.my-rides-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.my-rides-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.tabs-section {
+  margin-bottom: 40px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.tab {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #6c757d;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.rides-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.my-ride-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ride-info {
+  flex: 1;
+}
+
+.route-info {
+  margin-bottom: 20px;
+}
+
+.route {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.ride-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.date, .time {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.price {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-full {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-completed {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.passengers-info {
+  margin-bottom: 20px;
+}
+
+.passengers-info h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.no-passengers {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+}
+
+.passengers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.passenger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.passenger-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.passenger-status {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.passenger-status.confirmed {
+  color: #28a745;
+}
+
+.passenger-status.pending {
+  color: #ffc107;
+}
+
+.ride-description {
+  margin-bottom: 15px;
+}
+
+.ride-description h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.ride-description p {
+  color: #555;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ride-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.rides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    text-align: center;
+  }
+
+  .my-ride-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ride-actions {
+    flex-direction: row;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .ride-meta {
+    gap: 10px;
+  }
+
+  .rides-grid {
+    grid-template-columns: 1fr;
+  }
+}
